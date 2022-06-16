@@ -2,16 +2,17 @@ const mario = document.querySelector(".hero");
 const pipe = document.querySelector(".pipe");
 const score = document.querySelector(".count");
 
-const mario_dies = new Audio("./sounds/death.wav");
-const mario_jump = new Audio("./sounds/jump.wav");
-const mario_background = new Audio("./sounds/back.mp3");
+const mario_dies = new Audio("../sounds/death.wav");
+const mario_jump = new Audio("../sounds/jump.wav");
+const mario_background = new Audio("../sounds/back.mp3");
 
 let death = false;
 let count = 0;
 
 const jump = () => {
+  mario_background.play();
   mario.classList.add("jump");
-  // mario_jump.play();
+  mario_jump.play();
 
   setTimeout(() => {
     mario.classList.remove("jump");
@@ -30,8 +31,8 @@ const intervalo = setInterval(() => {
     mario.style.bottom = `${MarioJump}px`;
 
     mario_background.pause();
-    // mario_dies.play();
-    mario.src = "./img/game-over.png";
+    mario_dies.play();
+    mario.src = "../img/game-over.png";
     mario.style.width = "75px";
     mario.style.marginLeft = "50px";
 

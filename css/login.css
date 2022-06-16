@@ -10,12 +10,7 @@ body {
   height: 100vh;
 }
 
-.login_form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+.login_form,
 .login_header {
   display: flex;
   flex-direction: column;
@@ -27,7 +22,7 @@ body {
   margin-left: 11%;
 }
 .login_input {
-  border: 2px solid blue;
+  border: 2px solid #ccc;
   width: 100%;
   max-width: 200px;
   margin: 5% 0 3%;
@@ -39,6 +34,11 @@ body {
 }
 .login_button {
   width: 150px;
+  background-color: red;
+  cursor: pointer;
+}
+.login_button:disabled {
+  background-color: #ccc;
 }
 .login_input,
 .login_button {
