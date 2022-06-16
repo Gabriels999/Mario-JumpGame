@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
 }
 
 .gameboard {
@@ -37,9 +40,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20% auto;
+  margin: 10% auto;
 }
-.text > div {
+.text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  margin-top: 10%;
+}
+.rules {
   margin-top: 5%;
 }
 
