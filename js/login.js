@@ -1,5 +1,6 @@
 const input = document.querySelector(".login_input");
 const button = document.querySelector(".login_button");
+const form = document.querySelector(".login_form");
 
 const validateInput = (event) => {
   if (event.target.value.length > 2) {
@@ -9,4 +10,11 @@ const validateInput = (event) => {
   button.setAttribute("disabled", "");
 };
 
+const handleSubmit = (event) => {
+  event.preventDefault();
+  // localStorage.setItem("player", input.value); envia o input.value para o localstorage do usuário.
+  window.location = "../pages/game.html";
+};
+
 input.addEventListener("input", validateInput);
+form.addEventListener("submit", handleSubmit);
