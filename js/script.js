@@ -3,6 +3,7 @@ const pipe = document.querySelector(".pipe");
 const score = document.querySelector(".count");
 const user_record = document.querySelector(".record");
 const user = document.querySelector(".user");
+const playAgain = document.querySelector(".try-again");
 
 const mario_dies = new Audio("../sounds/death.wav");
 const mario_jump = new Audio("../sounds/jump.wav");
@@ -53,7 +54,8 @@ const intervalo = setInterval(() => {
       localRecord = localStorage.getItem("record");
       user_record.innerHTML = `${localRecord}m`;
     }
-    console.log(points);
+    playAgain.classList.remove("hide");
+
     clearInterval(intervalo);
   }
   if (death == false) {
@@ -62,5 +64,9 @@ const intervalo = setInterval(() => {
     score.innerHTML = `${points}m`;
   }
 }, 10);
+
+function reload() {
+  document.location.reload();
+}
 
 document.addEventListener("keydown", jump);

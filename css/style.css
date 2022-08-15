@@ -39,7 +39,7 @@
 }
 
 .text {
-  margin: 10% auto;
+  margin: 5% auto;
 }
 .text-box {
   gap: 10%;
@@ -77,6 +77,14 @@
   height: 4%;
   border: 5px solid red;
   border-radius: 25px;
+}
+
+.try-again {
+  width: 11% !important;
+  margin-bottom: 5%;
+}
+.hide {
+  display: none;
 }
 
 .rules {
