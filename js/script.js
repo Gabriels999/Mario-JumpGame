@@ -1,6 +1,8 @@
 const mario = document.querySelector(".hero");
 const pipe = document.querySelector(".pipe");
 const score = document.querySelector(".count");
+const user_record = document.querySelector(".record");
+const user = document.querySelector(".user");
 
 const mario_dies = new Audio("../sounds/death.wav");
 const mario_jump = new Audio("../sounds/jump.wav");
@@ -8,6 +10,15 @@ const mario_background = new Audio("../sounds/back.mp3");
 
 let death = false;
 let count = 0;
+
+const localUser = localStorage.getItem("player");
+user.innerHTML = `${localUser} -`;
+let localRecord = localStorage.getItem("record");
+if (localRecord == 0) {
+  user_record.innerHTML = `0m`;
+} else {
+  user_record.innerHTML = `${localRecord}m`;
+}
 
 const jump = () => {
   mario_background.play();
@@ -37,6 +48,12 @@ const intervalo = setInterval(() => {
     mario.style.marginLeft = "50px";
 
     death = true;
+    if (points > parseInt(localRecord)) {
+      localStorage.setItem("record", points);
+      localRecord = localStorage.getItem("record");
+      user_record.innerHTML = `${localRecord}m`;
+    }
+    console.log(points);
     clearInterval(intervalo);
   }
   if (death == false) {

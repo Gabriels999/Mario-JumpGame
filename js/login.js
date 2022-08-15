@@ -12,7 +12,7 @@ const validateInput = (event) => {
 
 const handleSubmit = (event) => {
   event.preventDefault();
-  // localStorage.setItem("player", input.value); envia o input.value para o localstorage do usuário.
+  localStorage.setItem("player", input.value); // envia o input.value para o localstorage do usuário.
   window.location = "../pages/game.html";
 };
 

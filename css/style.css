@@ -51,6 +51,34 @@
   flex-direction: column;
   align-items: center;
 }
+.score {
+  position: absolute;
+  top: 4%;
+  display: flex;
+  right: 5%;
+  width: 15%;
+}
+
+.user {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  font-size: 25px;
+  width: 19%;
+}
+
+.record {
+  position: absolute;
+  top: 6%;
+  left: 16%;
+}
+.info-border {
+  padding: 1% 1% 2%;
+  height: 4%;
+  border: 5px solid red;
+  border-radius: 25px;
+}
+
 .rules {
   margin-top: 5%;
 }
